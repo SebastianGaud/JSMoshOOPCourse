@@ -1,18 +1,14 @@
 
-// Object literal syntax
-const circle = {
-    // properties
-    radius: 1,
-    location: {
-        x: 2,
-        y:1
-    },
 
-    // methods
-    draw: function () {
-        console.log("draw");
-    }
-};
+// Factory fucntion
+function createCircle(radius) {
+    return {
+        radius,
+        draw: function () {
+            console.log('draw');
+        }
+    };
+}
 
-// call Object function
+const circle = createCircle(1);
 circle.draw();
