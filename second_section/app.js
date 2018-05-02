@@ -1,5 +1,4 @@
 
-
 // Factory fucntion
 function createCircle(radius) {
     return {
@@ -13,4 +12,16 @@ function createCircle(radius) {
 }
 
 const circle = createCircle(1);
-circle.draw();
+
+
+// Constructor Function
+function Circle(radius) {
+    // reference to object that execute this piece of code
+    this.radius = radius;
+    this.draw = function () {
+        console.log('draw');
+    }
+}
+
+const anotherCircle = new Circle(1);
+anotherCircle.draw();
