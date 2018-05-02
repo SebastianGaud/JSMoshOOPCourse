@@ -16,7 +16,8 @@ const circle = createCircle(1);
 
 // Constructor Function
 function Circle(radius) {
-    // reference to object that execute this piece of code
+    // reference to object that execute 
+    // this piece of code
     this.radius = radius;
     this.draw = function () {
         console.log('draw');
