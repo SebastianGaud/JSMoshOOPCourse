@@ -12,7 +12,3 @@ function Circle(radius) {
 // these two expression give same result
 const circle = Circle.call({}, 1);
 const circle1 = new Circle(1);
-
-
-
-
