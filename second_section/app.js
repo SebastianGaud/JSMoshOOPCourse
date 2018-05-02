@@ -9,12 +9,17 @@ function Circle(radius) {
     }
 }
 
+const Circle1 = new Function('radius', `
+    this.radius = radius;
+    this.draw = function () {
+        console.log('draw');
+    }`
+)
 
-// return the name of "class"
-console.log('Name\n', Circle.name);
+const circle = new Circle(1);
+const circle1 = new Circle1(1);
 
-//return number of parameters
-console.log('Number of parameters\n', Circle.length);
+// Result of both is equal
+console.log('Real circle\n',circle);
+console.log('circle1\n', circle);
 
-// return the function that creates this object
-console.log('Who create this object\n', Circle.constructor);
