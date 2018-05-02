@@ -7,9 +7,12 @@ const circle = {
         x: 2,
         y:1
     },
-    
+
     // methods
     draw: function () {
         console.log("draw");
     }
 };
+
+// call Object function
+circle.draw();
