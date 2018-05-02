@@ -1,19 +1,4 @@
 
-// Factory fucntion
-function createCircle(radius) {
-    return {
-        // if the name of the value 
-        // has the same name of the key we can omit the key
-        radius,
-        draw: function () {
-            console.log('draw');
-        }
-    };
-}
-
-const circle = createCircle(1);
-
-
 // Constructor Function
 function Circle(radius) {
     // reference to object that execute 
@@ -24,5 +9,12 @@ function Circle(radius) {
     }
 }
 
-const anotherCircle = new Circle(1);
-anotherCircle.draw();
+
+// return the name of "class"
+console.log('Name\n', Circle.name);
+
+//return number of parameters
+console.log('Number of parameters\n', Circle.length);
+
+// return the function that creates this object
+console.log('Who create this object\n', Circle.constructor);
