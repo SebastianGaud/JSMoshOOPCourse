@@ -9,17 +9,10 @@ function Circle(radius) {
     }
 }
 
-const Circle1 = new Function('radius', `
-    this.radius = radius;
-    this.draw = function () {
-        console.log('draw');
-    }`
-)
+// these two expression give same result
+const circle = Circle.call({}, 1);
+const circle1 = new Circle(1);
 
-const circle = new Circle(1);
-const circle1 = new Circle1(1);
 
-// Result of both is equal
-console.log('Real circle\n',circle);
-console.log('circle1\n', circle);
+
 
