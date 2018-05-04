@@ -52,6 +52,8 @@ function Stopwatch() {
     this.reset = function () {
         isRunning = false;
         duration = 0;
+        startTime = null;
+        stopTime = null;
     }
 
 
